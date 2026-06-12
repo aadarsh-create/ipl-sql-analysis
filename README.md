@@ -6,6 +6,21 @@ A data analysis project on IPL cricket data (2008–2024) using MySQL.
 
 ---
 
+## Project Structure
+
+```
+ipl-sql-analysis/
+├── schema.sql
+├── queries/
+│   ├── 01_basic.sql
+│   ├── 02_joins.sql
+│   ├── 03_cte.sql
+│   └── 04_window_functions.sql
+├── diagrams/
+│   └── er_diagram.png
+└── README.md
+```
+
 ## Dataset
 
 Source: [Kaggle — IPL Complete Dataset](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020)  
@@ -21,17 +36,13 @@ Files: `matches.csv`, `deliveries.csv`
 
 ## Schema
 
-- **matches** — match-level data
-  - season
-  - teams
-  - venue
-  - winner
-  - result
-- **deliveries** — ball-by-ball data
-  - batter
-  - bowler
-  - runs
-  - wickets
+| matches | deliveries |
+|---------|------------|
+| season | match_id |
+|  venue| batter |
+| teams | bowler |
+| winner | batsman_runs |
+| result | wickets |
 
 ---
 
